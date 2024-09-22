@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Permanent+Marker&family=Chewy&display=swap');
+body {
+    position: relative; /* Make sure the body has a position context for the overlay */
+    background-image: url('https://i.pinimg.com/736x/89/39/62/8939625b27a3bca229c50841577fbc92.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f5cdfd; /* Fallback color */
+    height: 100vh; /* Ensure it covers full height */
+    font-family: 'Chewy', cursive;
+    margin: 0;
+    padding: 20px;
+}
+
+body::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Position it absolutely within the body */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(219, 202, 186, 0.5); /* Adjust color and opacity */
+    z-index: 1; /* Ensure it appears above the background but below the content */
+	background-size:cover;
+	height:100%;
+}
+
+.container {
+    position: relative; /* Ensure the container is above the overlay */
+    background-color: #fff;
+    border: 4px solid black;
+    border-radius: 40px;
+    padding: 20px;
+    max-width: 70%;
+    margin: 8% auto;
+    z-index: 2; /* Make sure the container is above the overlay */
+}
+
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.checkbox {
+    display: none; /* Hide the default checkbox */
+}
+
+.custom-checkbox {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #000;
+    background-color: #fff; /* White background */
+    margin-right: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox:checked + .custom-checkbox {
+    background-color: #fff; /* Keep background white when checked */
+}
+
+.custom-checkbox:after {
+    content: ''; /* Create a pseudo-element for the tick */
+    position: absolute;
+    left: 8px; /* Positioning the tick */
+    top: 4px; /* Adjust the top position */
+    width: 8px; /* Width of the tick */
+    height: 16px; /* Height of the tick */
+    border: solid black; /* Black tick */
+    border-width: 0 3px 3px 0; /* Shape the tick */
+    transform: rotate(45deg); /* Rotate to make a tick */
+    display: none; /* Initially hide the tick */
+}
+
+.checkbox:checked + .custom-checkbox:after {
+    display: block; /* Show the tick when checked */
+}
+
+.item-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 5px 0; /* Adjust padding for top/bottom, remove left/right padding */
+    margin: 0; /* Remove any margin */
+    border-bottom: 2px solid #000; /* Bottom border to resemble notebook lines */
+    box-sizing: border-box; /* Ensure padding/border are included in width */
+	font-family:inherit;
+	font-size:large;
+	text-transform:capitalize;
+}
+
+.item-input::placeholder {
+    color: #999; /* Placeholder color */
+    opacity: 0.7; /* Slightly transparent */
+}
+
+.header {
+    color: #000;
+    text-align: center;
+    position: relative; /* Ensure positioning for child elements */
+}
+
+.icon {
+    display: inline-block; /* Allows for individual styling */
+}
+
+.icon i {
+    font-size: 24px; /* Adjust size if needed */
+}
+
+.icon:last-child {
+    animation: pulse 1s infinite;
+    margin-right: 5px;
+}
+
+.icon:first-child {
+    animation: rotate 3s infinite; /* Apply rotate animation to circle-check icon */
+    margin-left: 5px; 
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media (max-width: 1200px){
+	.container{
+		margin:8% auto;
+		max-width:400px;
+	}
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+	.container{
+		margin:8% auto;
+    max-width: 90%;
+	}
+    .header {
+        font-size: 20px; /* Smaller heading size */
+    }
+
+    .custom-checkbox {
+        width: 25px; /* Smaller checkbox width */
+        height: 25px; /* Smaller checkbox height */
+    }
+	.custom-checkbox:after{
+		width:4px;
+		height:8px;
+	}
+
+    .icon i {
+        font-size: 20px; /* Adjust icon size */
+    }
+
+    .item-input {
+        padding: 4px 0; /* Slightly reduce padding */
+    }
+}
+
+
+.info {
+    display: flex;
+    align-items: center;
+    font-size: 14px; /* Adjust font size as needed */
+    margin-top: 10px; /* Space above the info text */
+    text-align: center; /* Center align text */
+    justify-content: center; /* Center align flex items */
+    flex-direction: row; /* Stack items vertically */
+	letter-spacing:1px;
+	word-spacing:1px;
+}
+
+kbd{
+	background:#ddd;
+	padding:2px 3px;
+	border-radius:3px;
+	border:0.5px solid #000;
+}
+
+.info .info-icon {
+    margin-right: 5px; /* Space between icon and text */
+}
