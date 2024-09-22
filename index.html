@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+    <link rel="stylesheet" href="styles.css">
+    <title>My Checklist</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">
+            <span class="icon"><i class="fa-solid fa-circle-check"></i></span> My Checklist <span class="icon"><i class="fa-solid fa-bolt"></i></span>
+        </h1>
+		
+        <div class="info">
+            <span class="info-icon"><i class="fa-solid fa-info-circle"></i></span>
+            <small>Use <kbd>del</kbd> to delete items, swipe left on mobile.</small>
+        </div>
+		
+        <div id="checkboxes">
+            <div class="checkbox-item">
+                <input type="checkbox" class="checkbox" id="item1" />
+                <label for="item1" class="custom-checkbox"></label>
+                <input type="text" class="item-input" placeholder="Add item..." />
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
