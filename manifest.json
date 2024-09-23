@@ -1,7 +1,7 @@
 {
   "name": "Checklist App",
   "short_name": "Checklist",
-  "start_url": "/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#dbcaba",
   "theme_color": "#dbcaba",
