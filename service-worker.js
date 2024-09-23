@@ -11,10 +11,8 @@ const urlsToCache = [
   '/manifest.json',
   '/icon.jpg',
   'Chewy-Regular.ttf',
-  'circle-check-solid.svg',
-  'bolt-solid.svg',
-  '/icons/font-awesome.css', // Use your local Font Awesome CSS
-  '/icons/fa-solid-900.woff2', // Add the necessary Font Awesome files here
+  'https://fonts.googleapis.com/css2?family=Chewy&display=swap', // External font
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css', // Font Awesome
 ];
 
 // Install service worker and cache resources
