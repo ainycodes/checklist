@@ -43,11 +43,6 @@ body::before {
     z-index: 2; /* Make sure the container is above the overlay */
 }
 
-.subheading{
-	display:block;
-	color:brown;
-	text-align:center;
-}
 
 .checkbox-item {
     display: flex;
