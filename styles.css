@@ -43,7 +43,7 @@ body::before {
     z-index: 2; /* Make sure the container is above the overlay */
 }
 
-.info h3{
+.subheading{
 	display:block;
 	color:brown;
 	text-align:center;
