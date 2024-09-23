@@ -115,7 +115,7 @@ body::before {
 }
 
 .icon i {
-    font-size: 24px; /* Adjust size if needed */
+    font-size: 16px; /* Adjust size if needed */
 }
 
 .icon:last-child {
