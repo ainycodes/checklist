@@ -11,6 +11,8 @@ const urlsToCache = [
   '/manifest.json',
   '/icon.jpg',
   'Chewy-Regular.ttf',
+  'circle-check-solid.svg',
+  'bolt-solid.svg',
   '/icons/font-awesome.css', // Use your local Font Awesome CSS
   '/icons/fa-solid-900.woff2', // Add the necessary Font Awesome files here
 ];
