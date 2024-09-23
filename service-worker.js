@@ -10,6 +10,7 @@ const urlsToCache = [
   '/manifest.json', // Include manifest if necessary
   '/icon.jpg',
   '/icon.jpg',
+  'Chewy-Regular.ttf',
   'https://fonts.googleapis.com/css2?family=Chewy&display=swap', // External font
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css', // Font Awesome
 ];
@@ -34,3 +35,4 @@ self.addEventListener('fetch', event => {
       })
   );
 });
+
