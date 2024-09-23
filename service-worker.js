@@ -4,10 +4,16 @@ const CACHE_NAME = 'checklist-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/styles.css',  // Add your CSS files
-  '/app.js',      // Add your JavaScript files
-  '/favicon.ico'  // Any other assets you want to cache
+  '/styles.css',
+  '/script.js',
+  '/app.js', // Include all your JS files
+  '/manifest.json', // Include manifest if necessary
+  '/icon.png',
+  '/icon.png',
+  'https://fonts.googleapis.com/css2?family=Chewy&display=swap', // External font
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css', // Font Awesome
 ];
+
 
 // Install service worker and cache resources
 self.addEventListener('install', event => {
