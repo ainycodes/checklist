@@ -6,6 +6,7 @@ const urlsToCache = [
   '/index.html',
   '/styles.css',
   '/script.js',
+  'offline.html',
   '/app.js', // Include all your JS files
   '/manifest.json', // Include manifest if necessary
   '/icon.jpg',
@@ -29,10 +30,13 @@ self.addEventListener('install', event => {
 // Fetch resources from cache when offline
 self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        return response || fetch(event.request);
-      })
+    caches.match(event.request).then(response => {
+      // If the resource is cached, return it, otherwise try to fetch it
+      return response || fetch(event.request).catch(() => {
+        // If fetching fails (offline), serve the offline page
+        return caches.match('/offline.html');
+      });
+    })
   );
 });
 
