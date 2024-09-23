@@ -8,8 +8,8 @@ const urlsToCache = [
   '/script.js',
   '/app.js', // Include all your JS files
   '/manifest.json', // Include manifest if necessary
-  '/icon.png',
-  '/icon.png',
+  '/icon.jpg',
+  '/icon.jpg',
   'https://fonts.googleapis.com/css2?family=Chewy&display=swap', // External font
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css', // Font Awesome
 ];
